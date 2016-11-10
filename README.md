@@ -1,4 +1,10 @@
-# 2016-11-10_burger-year
+# Burger Year
+
+My year of eating burgers every single day
+
+An experiment for [#Codevember](http://codevember.xyz) using [slush-globeapp](https://github.com/BostonGlobe/slush-globeapp)
+
+## Documentation
 
 This project was generated with [slush-globeapp](https://github.com/BostonGlobe/slush-globeapp). Consult its [README](https://github.com/BostonGlobe/slush-globeapp) for more information.
 
