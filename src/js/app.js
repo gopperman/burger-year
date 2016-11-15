@@ -1,23 +1,25 @@
+import _ from 'lodash'
 import setPathCookie from './utils/setPathCookie'
 import removeMobileHover from './utils/removeMobileHover'
 
 const requestURL = "https://spreadsheets.google.com/feeds/list/12M7lpW4jVl4YtB0D6WwnlSoUubuuHFWTgtfgj4JfLto/od6/public/values?alt=json"
 
 const requestData = (url) => {
-    let data = new XMLHttpRequest()
+    let request = new XMLHttpRequest()
 
-    data.onreadystatechange = () => {
-        if (data.readyState == XMLHttpRequest.DONE ) {
-           if (data.status == 200) {
-           		console.log(JSON.parse(data.responseText))
-           		return JSON.parse(data.responseText)
-           }
+    request.onreadystatechange = () => {
+        if (request.readyState == XMLHttpRequest.DONE ) {
+           if (request.status == 200) {
+           		const json = JSON.parse(request.responseText)
+           		const data = _.get(json, 'feed')
+           		return data
+         	}
            return {}
         }
     }
 
-    data.open("GET", url, true)
-    data.send()
+    request.open("GET", url, true)
+    request.send()
 }
 
 removeMobileHover()
