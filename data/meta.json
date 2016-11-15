@@ -1,15 +1,15 @@
 {
-	"title": "Graphic title",
-	"author": "",
+	"title": "My Burger Year",
+	"author": "Greg Opperman",
 	"description": "Description of graphic",
 	"keywords": "Comma, delimited, for, seo",
 	"url": "//apps.bostonglobe.com/graphics/path/to/graphic",
 	"imageUrl": "//apps.bostonglobe.com/graphics/path/to/image",
-	"section": "Metro",
-	"sectionUrl": "//bostonglobe.com/metro",
-	"credits": "",
+	"section": "Food",
+	"sectionUrl": "//bostonglobe.com",
+	"credits": "Greg Opperman",
 	"teasers": [],
-	"meter": true,
-	"socialConnect": true,
+	"meter": false,
+	"socialConnect": false,
 	"ads": false
 }

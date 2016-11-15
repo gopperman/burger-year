@@ -32,6 +32,7 @@
     "request": "^2.72.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.1",
+    "lodash": "^4.17.1",
     "shelljs": "^0.7.0",
     "webpack": "^1.13.1",
     "webpack-stream": "^3.2.0",

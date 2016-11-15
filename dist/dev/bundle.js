@@ -56,8 +56,29 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var requestURL = "https://spreadsheets.google.com/feeds/list/12M7lpW4jVl4YtB0D6WwnlSoUubuuHFWTgtfgj4JfLto/od6/public/values?alt=json";
+
+	var requestData = function requestData(url) {
+	    var data = new XMLHttpRequest();
+
+	    data.onreadystatechange = function () {
+	        if (data.readyState == XMLHttpRequest.DONE) {
+	            if (data.status == 200) {
+	                console.log(JSON.parse(data.responseText));
+	                return JSON.parse(data.responseText);
+	            }
+	            return {};
+	        }
+	    };
+
+	    data.open("GET", url, true);
+	    data.send();
+	};
+
 	(0, _removeMobileHover2.default)();
 	(0, _setPathCookie2.default)();
+
+	var data = requestData(requestURL);
 
 	// Add class to html if JS is loaded
 	document.getElementsByTagName('html')[0].className += 'js-loaded';
